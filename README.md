@@ -1,7 +1,6 @@
 # Live Link Of Project
 
-https://6583c524e78d19a302c17dae--lambent-pithivier-0ea8f3.netlify.app/
-
+https://65840bc6818c42cd4a286151--genuine-sunshine-b5d5c7.netlify.app/
 
 
 
