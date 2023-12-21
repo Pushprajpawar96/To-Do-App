@@ -6,17 +6,18 @@ import validInput from './Validation.js'
 
 const ToDo = () => {
 
+    const initialValues = {
+        inputlist : ''
+    }
   const [item, setItem] = useState([]);
 
    
-  const {values,handleBlur,handleChange,handleSubmit,resetForm,errors} = useFormik({
-    initialValues: {
-      inputlist: '',
-    },
+  const {values,handleBlur,handleChange,handleSubmit,resetForm} = useFormik({
+    initialValues:  initialValues,
     validationSchema: validInput,
     onSubmit: (values) => {
       if (values.inputlist.trim() !== '') {
-        setItem((oldlist) => [...oldlist, values.inputlist]);
+        setItem((list) => [...list, values.inputlist]);
         resetForm();
       }
     },
@@ -27,7 +28,7 @@ const ToDo = () => {
 
   const handleDelete = (id) => {
     console.log('Deleted');
-    setItem((oldItems) => oldItems.filter((arrElem, index) => index !== id));
+    setItem((oldlist) => oldlist.filter((array, index) => index !== id));
     
   };
 
@@ -53,11 +54,10 @@ const ToDo = () => {
             <button type='submit'>Add</button>
             <br />
           </form>
-          {/* {errors.inputlist &&  <small>{errors.inputlist}</small>} */}
-
 
           <ol>
-            {item.map((itemval, index) => ( <TODOLIST key={index} id={index} text={itemval} onSelect={handleDelete} />  ))}
+            {item.map((itemval, index) => (
+                 <TODOLIST key={index} id={index} text={itemval} onSelect={handleDelete} /> ))}
           </ol>
         </div>
       </div>

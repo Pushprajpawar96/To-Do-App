@@ -1,14 +1,5 @@
 
-/*  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #848fcd;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    margin: 20px;
-  } */ 
+
 
   *{
     box-sizing: border-box;
@@ -95,7 +86,6 @@
     align-items: center;
     color: #e03d07;
     
-    /* text-transform: capitalize; */
   }
 
   ol li:hover{
@@ -123,7 +113,6 @@
     margin: 0 15px 0 35px;
     color: aliceblue;
     
-    /* box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3); */
 
   }
 
